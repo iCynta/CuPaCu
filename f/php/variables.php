@@ -1,5 +1,5 @@
 <?php
-$do="http://localhost/";     //   http://www.copacu.com/"   
+$do="http://localhost/copacu/";     //   http://www.copacu.com/"   
 $host="localhost";
 $user="root";
 $pass="";
