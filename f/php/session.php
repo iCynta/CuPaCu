@@ -1,5 +1,5 @@
 <?php
-// Start the session
+// Start the session This should be the very firt line of code
 session_start();
 // Declaring null variables.........
 $cuterror=$pro=$cookiestate=$cookiecountry=$lastvisitid=$error="";
