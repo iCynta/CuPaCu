@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <!-- this is my error page -->
+<!-- just another comment -->
 <html lang="en">
 <?php include_once 'f/head.php'; ?>
 <body>
