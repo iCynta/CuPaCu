@@ -1,4 +1,6 @@
 <?php
+// Start the session
+session_start();
 // Declaring null variables.........
 $cuterror=$pro=$cookiestate=$cookiecountry=$lastvisitid=$error="";
 
@@ -6,11 +8,12 @@ $cuterror=$pro=$cookiestate=$cookiecountry=$lastvisitid=$error="";
 //get the browser link
 $link=@$_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"];
 // ALL GET Operation Here
-$page=@$_GET['page']; //this is only for main.php
-$process=@$_GET['process'];//this is for process.php
+if(isset($_GET['page'])) // Checking if "Page" variable is available in URL
+    $page   =  $_GET['page']; //this is only for main.php
+if(isset($_GET['process'])) // Checking if "process" variable is available in URL
+    $process    =   $_GET['process'];//this is for process.php
 
-// Start the session
-session_start();
+
 //session starting
 if (!@$_SESSION['start']){
 //Location Manager With IP
@@ -18,7 +21,7 @@ $user_ip = getenv('REMOTE_ADDR'); //  "127.0.0.1";
 //Check IP Exists or not
 	if($user_ip){
 		//connecting to data base 
-		include_once "connect.php";
+		require_once "connect.php";
 		$sessionipcheck=mysqli_query($conn,"SELECT * FROM $table9 WHERE ip ='$user_ip' ");
 		if (mysqli_num_rows($sessionipcheck) ==1) {
 			$srowli = mysqli_fetch_assoc($sessionipcheck);
