@@ -1,7 +1,7 @@
 <body>
 <div id='h'>
 	<header>
-	<a href="<?php echo $do;?>"><img src="/f/image/icon/copacu.ico" alt="copacu.com"/></a>
+	<a href="<?php echo $do;?>"><img src="f/image/icon/copacu.ico" alt="copacu.com"/></a>
 	</header>	
 	<nav>
 		<ul>
