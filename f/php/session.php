@@ -1,6 +1,11 @@
 <?php
 // Start the 1session This should be the very firt line of code
 session_start();
+if(isset($_GET['sign_out']))
+{
+    echo $_GET['sign_out'];
+    session_destroy();
+}
 // Declaring null variables.........
 $cuterror=$pro=$cookiestate=$cookiecountry=$lastvisitid=$error="";
 
