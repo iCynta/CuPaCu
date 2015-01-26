@@ -9,6 +9,7 @@
 			<li><a href="<?php echo $do;?>copies"><?php echo $_SESSION['username'];?></a></li>
 			<li><a href="<?php echo $do;?>post">New</a></li>					
 			<li><?php if(($sessioncountry=$_SESSION['usercountry'])&&($sessionstate=$_SESSION['userstate'])){ echo "<li><a href='$do.\changelocation'>$sessionstate,$sessioncountry</a></li>";}else{echo "<li><a href='$do.\setlocation'>Set Location</a></li>";}?></li>
+                        <li><a href="<?php echo $do;?>index.php?sign_out=1">Sign Out</a></li>
 		<?php }else {?>
 			<li><a href="<?php echo $do;?>login">Login</a></li>
 			<li><a href="<?php echo $do;?>register">Register</a></li>
