@@ -3,8 +3,8 @@
 session_start();
 if(isset($_GET['sign_out']))
 {
-    echo $_GET['sign_out'];
     session_destroy();
+    header("Location: $do login");
 }
 // Declaring null variables.........
 $cuterror=$pro=$cookiestate=$cookiecountry=$lastvisitid=$error="";
